@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<h1>Category Master</h1>
+@model WebApplication2.Models.CategoryMaster
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="row">
+        <div>
+            <label class="formLabel">Enter Category:</label>
+            @Html.TextBoxFor(c => c.CategoryName, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div id="col">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+}
+
+
+

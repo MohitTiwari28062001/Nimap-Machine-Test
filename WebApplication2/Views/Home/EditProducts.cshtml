@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "EditProducts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditProducts</h2>
+
+@model  WebApplication2.Models.ProductMaster
+
+@using (Html.BeginForm("EditProductsByID", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col">
+            Product ID:
+            @Html.TextBoxFor(c => c.ProductId)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            Product Name:
+            @Html.TextBoxFor(c => c.ProductName)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            Product Name:
+            @Html.TextBoxFor(c => c.CategoryName)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            Product Name:
+            @Html.TextBoxFor(c => c.CategoryId)
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+}

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Products</h2>
+
+@model WebApplication2.Models.Products
+
+@using (Html.BeginForm("Products", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="displayTableProducts">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category ID</th>
+                <th>Category Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.GetProducts)
+            {
+
+                <tr>
+                    <td>@item.ProductId</td>
+                    
+                    <td>@item.ProductName</td>
+                    <td>@item.CategoryId</td>
+                    <td>@item.CategoryName</td>
+                    <td>
+                        @Html.ActionLink("Edit", "EditProducts", new { ID = item.ProductId }, new { @class = "btn btn-success" }) &nbsp;
+                        @Html.ActionLink("Delete", "DeleteProduct", new { ID = item.ProductId }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

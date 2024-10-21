@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<h1>Categories</h1>
+
+@model WebApplication2.Models.CategoryMaster
+
+<table class="displayTableCategories">
+    <thead>
+
+        <tr>
+            <th>Category_ID</th>
+            <th>Category_Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var items in ViewBag.GetCategories)
+        {
+            <tr>
+                <td>@items.CategoryID</td>
+                <td>@items.CategoryName</td>
+
+                <td>
+                    @Html.ActionLink("Edit", "EditCategory", new { ID = items.CategoryID }, new { @class = "btn btn-success" }) &nbsp;
+                    @Html.ActionLink("Delete", "DeleteCategory", new { ID = items.CategoryID }, new { @class = "btn btn-danger" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

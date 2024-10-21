@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<h1>Product Master</h1>
+@model WebApplication2.Models.ProductMaster
+
+@using (Html.BeginForm("About", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="row">
+        <div class="col">
+            <label class="formLabel">Enter the Product Name:</label>
+            @Html.TextBoxFor(p => p.ProductName, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div id="col">
+            <label class="formLabel">Enter the Category ID:</label>
+            @Html.TextBoxFor(p => p.CategoryId, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col">
+            <label class="formLabel">Enter the Category Name:</label>          
+            @Html.TextBoxFor(p => p.CategoryName, new { @class = "form-control" })
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+}
+@*<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#CategoryNameDropdown').change(function () {
+            var CategoryID = $(this).val();
+            alert("Country ID :" + CategoryID);
+
+            if (CategoryID != '') {
+                $.get("/Home/GetStates", { CategoryID: CategoryID }, function (data) {
+                    var items = '<option>-- Select State --</option>';
+                    $.each(data, function (i, states) {
+                        items += "<option value='" + states.CategoryID + "'>" + states.CategoryID + "</option>";
+                    });
+                    //adding items to state dropdown fetced from the state table
+                    $('#CategoryIDDropdown').html(items);
+                });
+            } else {
+                $('#CategoryIDDropdown').html('<option>Select State</option>');
+            }
+        });
+    });
+</script>*@ 

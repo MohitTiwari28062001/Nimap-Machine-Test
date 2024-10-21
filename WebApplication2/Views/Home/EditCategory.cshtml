@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "EditCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditCategory</h2>
+
+@model  WebApplication2.Models.CategoryMaster
+
+@using (Html.BeginForm("EditCategoryById", "Home", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col">
+            Category ID:
+            @Html.TextBoxFor(c => c.CategoryID)
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            Category Name:
+            @Html.TextBoxFor(c => c.CategoryName)
+        </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,82 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.formLabel {
+    font-size: 18px;
+    margin-bottom: 10px
+}
+
+.displayTableCategories {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 40%
+}
+
+    .displayTableCategories > thead > tr {
+        background-color: #041E42;
+        color: white;
+        height: 60px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+        .displayTableCategories > thead > tr > th {
+            text-align: center
+        }
+
+    .displayTableCategories > tbody > tr {
+        height: 55px;
+        border: 1px solid #D8DADC;
+    }
+
+        .displayTableCategories > tbody > tr > td {
+            text-align: center
+        }
+
+.displayTableProducts {
+    border: 1px solid transparent;
+    border-collapse: collapse;
+    margin-top: 30px;
+    width: 60%
+}
+
+    .displayTableProducts > thead > tr {
+        background-color: #041E42;
+        color: white;
+        height: 60px;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+        .displayTableProducts > thead > tr > th {
+            text-align: center
+        }
+
+    .displayTableProducts > tbody > tr {
+        height: 55px;
+        border: 1px solid #D8DADC;
+    }
+
+        .displayTableProducts > tbody > tr > td {
+            text-align: center
+        }
+
+style="border: 1px solid #D8DADC;"
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
